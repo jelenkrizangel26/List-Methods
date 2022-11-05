@@ -16,7 +16,7 @@
 
 import sys
 
-list1 = [10, 40, 20, 60, 30, 50, 70, 80, 100, 200]
+
 border = ("\33[35m*************************************************************\33[0m\n")
 
 def intro():
@@ -24,6 +24,7 @@ def intro():
     print("\n So here's our list for today.\n")
 
 def list():
+    list1 = [10, 40, 20, 60, 30, 50, 70, 80, 100, 200]
     print("Array:",list1)
     print(border)
 
@@ -47,6 +48,7 @@ def start():
             string = "\n\t              \33[3m\33[1m\33[35m Starting!\33[0m" 
             print(string)
             number = input("Enter the element you want to add: ")
+            list1 = [10, 40, 20, 60, 30, 50, 70, 80, 100, 200]
             list1.append(number)
             print("\n Here's your result:")
             print("Array:",list1)
@@ -58,6 +60,7 @@ def start():
             string = "\n\t              \33[3m\33[1m\33[35m Starting!\33[0m" 
             print(string)
             print("\n Here's your result:")
+            list1 = [10, 40, 20, 60, 30, 50, 70, 80, 100, 200]
             list1.reverse()
             print("Array:",list1)
 
@@ -67,6 +70,7 @@ def start():
             string = "\n\t              \33[3m\33[1m\33[35m Innitializing...\33[0m" 
             print(string)
             print("\n Here's your result:")
+            list1 = [10, 40, 20, 60, 30, 50, 70, 80, 100, 200]
             smallest = min(list1)
             print(smallest)
 
@@ -75,6 +79,7 @@ def start():
         elif pick == '4':
             string = "\n\t              \33[3m\33[1m\33[35m Innitializing...\33[0m" 
             print(string)
+            list1 = [10, 40, 20, 60, 30, 50, 70, 80, 100, 200]
             total = sum(list1)
             print("Here's the sum of all of the elements")
             print(total)
@@ -84,6 +89,7 @@ def start():
         elif pick == '5':
             string = "\n\t              \33[3m\33[1m\33[35m Innitializing...\33[0m" 
             print(string)
+            list1 = [10, 40, 20, 60, 30, 50, 70, 80, 100, 200]
             list1.sort()
             print("\n Here's your new array:")
             print("Array:",list1)
@@ -93,6 +99,7 @@ def start():
         elif pick == '6':
             string = "\n\t              \33[3m\33[1m\33[35m Innitializing...\33[0m" 
             print(string)
+            list1 = [10, 40, 20, 60, 30, 50, 70, 80, 100, 200]
             list1.sort(reverse=True)
             print("\n Here's your new array:")
             print(list1)
