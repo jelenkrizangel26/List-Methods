@@ -17,15 +17,14 @@
 import sys
 
 list1 = [10, 40, 20, 60, 30, 50, 70, 80, 100, 200]
-border = ("\33[35m******************************************\33[0m\n")
+border = ("\33[35m*************************************************************\33[0m\n")
 
 def intro():
-    print("Good day, Welcome to List Manipulation!")
-    print("So here's our list for today.\n")
+    print("\n Good day, Welcome to List Manipulation!")
+    print("\n So here's our list for today.\n")
 
 def list():
-    print(border)
-    print(list1)
+    print("Array:",list1)
     print(border)
 
 def menu():
@@ -50,8 +49,9 @@ def start():
             number = input("Enter the element you want to add: ")
             list1.append(number)
             print("\n Here's your result:")
-            print(list1)
-            sys.exit("\n")
+            print("Array:",list1)
+
+            again()
 
         elif pick == '2':
             print(border)
@@ -59,8 +59,9 @@ def start():
             print(string)
             print("\n Here's your result:")
             list1.reverse()
-            print(list1)
-            sys.exit("\n")
+            print("Array:",list1)
+
+            again()
 
         elif pick == '3':
             string = "\n\t              \33[3m\33[1m\33[35m Innitializing...\33[0m" 
@@ -68,41 +69,51 @@ def start():
             print("\n Here's your result:")
             smallest = min(list1)
             print(smallest)
-            sys.exit("\n")
+
+            again()
 
         elif pick == '4':
-            string = "\n\t              \33[3m\33[1m\33[35m Starting!\33[0m" 
+            string = "\n\t              \33[3m\33[1m\33[35m Innitializing...\33[0m" 
             print(string)
             total = sum(list1)
+            print("Here's the sum of all of the elements")
             print(total)
-            sys.exit("\n")
+
+            again()
 
         elif pick == '5':
-            string = "\n\t              \33[3m\33[1m\33[35m Starting!\33[0m" 
+            string = "\n\t              \33[3m\33[1m\33[35m Innitializing...\33[0m" 
             print(string)
-            print("\n Here's your result:")
-            sys.exit("\n")
+            list1.sort()
+            print("\n Here's your new array:")
+            print("Array:",list1)
+
+            again()
 
         elif pick == '6':
-            string = "\n\t              \33[3m\33[1m\33[35m Starting!\33[0m" 
+            string = "\n\t              \33[3m\33[1m\33[35m Innitializing...\33[0m" 
             print(string)
-            print("\n Here's your result:")
-            sys.exit("\n")
+            list1.sort(reverse=True)
+            print("\n Here's your new array:")
+            print(list1)
+
+            again()
+
+def main():
+    intro()
+    list()
+    menu()
+    start()
+
+def again():
+    answer = input("\nTry again y/n. \n>> ")
+    if answer.lower() == "y":
+        return main()
+    elif answer.lower() == "n":
+        print("\t          \33[3m\33[35mThanks for playing! ")
+        sys.exit("\n")
+    else: 
+        print("\t\33[35m\33[1m        Sorry your input must be a y or n!\33[0m")
+        return again()
         
-
-
-
-
-
-        
-
-
-
-    
-    
-
-
-intro()
-list()
-menu()
-start()
+main()
