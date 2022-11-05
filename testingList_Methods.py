@@ -29,7 +29,7 @@ def list():
     print(border)
 
 def menu():
-    list2 = ["1 -> Add an element" ,"2 -> Insert an element", "3 -> Modify an element" ,"4 -> Delete an element" ,"5 -> Arrange in ascending order" ,"6 -> Arrange in descending order"]
+    list2 = ["1 -> Add an element" ,"2 -> Reverse the list", "3 -> Find the smallest element" ,"4 -> Sum of the elements" ,"5 -> Arrange in ascending order" ,"6 -> Arrange in descending order"]
     print("Instructions: Pick number from 1 to 6 to tell what you want. \n Menu:")
     print(list2[0])
     print(list2[1])
@@ -47,34 +47,46 @@ def start():
             print(border)
             string = "\n\t              \33[3m\33[1m\33[35m Starting!\33[0m" 
             print(string)
-            number = input("Enter the number you want to add: \n >>")
+            number = input("Enter the element you want to add: ")
             list1.append(number)
+            print("\n Here's your result:")
             print(list1)
             sys.exit("\n")
 
         elif pick == '2':
+            print(border)
             string = "\n\t              \33[3m\33[1m\33[35m Starting!\33[0m" 
             print(string)
+            print("\n Here's your result:")
+            list1.reverse()
+            print(list1)
             sys.exit("\n")
 
         elif pick == '3':
-            string = "\n\t              \33[3m\33[1m\33[35m Starting!\33[0m" 
+            string = "\n\t              \33[3m\33[1m\33[35m Innitializing...\33[0m" 
             print(string)
+            print("\n Here's your result:")
+            smallest = min(list1)
+            print(smallest)
             sys.exit("\n")
 
         elif pick == '4':
             string = "\n\t              \33[3m\33[1m\33[35m Starting!\33[0m" 
             print(string)
+            total = sum(list1)
+            print(total)
             sys.exit("\n")
 
         elif pick == '5':
             string = "\n\t              \33[3m\33[1m\33[35m Starting!\33[0m" 
             print(string)
+            print("\n Here's your result:")
             sys.exit("\n")
 
         elif pick == '6':
             string = "\n\t              \33[3m\33[1m\33[35m Starting!\33[0m" 
             print(string)
+            print("\n Here's your result:")
             sys.exit("\n")
         
 
